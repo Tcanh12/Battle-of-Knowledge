@@ -210,7 +210,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex flex-col md:flex-row gap-3 md:gap-4 w-full max-w-xs md:max-w-none px-6"
+          className="flex flex-col md:flex-row flex-wrap justify-center gap-3 md:gap-4 w-full max-w-xs md:max-w-2xl px-6"
         >
           <button
             onClick={() => navigate('/create')}
@@ -228,6 +228,14 @@ export default function LandingPage() {
           >
             <Users className="w-5 h-5 relative z-10 text-white/70 group-hover:text-white transition-colors" />
             <span className="relative z-10 text-white/80 group-hover:text-white transition-colors">Tham Gia Bằng Mã</span>
+          </button>
+
+          <button
+            onClick={() => window.location.href = '/theory'}
+            className="group relative w-full md:w-auto px-6 md:px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3 text-white"
+          >
+            <BookOpen className="w-5 h-5 relative z-10" />
+            <span className="relative z-10">Học Viện Lý Luận</span>
           </button>
         </motion.div>
 
