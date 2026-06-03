@@ -7,7 +7,10 @@ import PlayerLobbyPage from './pages/PlayerLobbyPage';
 import HostDashboardPage from './pages/HostDashboardPage';
 import GamePage from './pages/GamePage';
 import ResultPage from './pages/ResultPage';
-
+import TheoryDashboard from './pages/theory/TheoryDashboard';
+import ChapterDetail from './pages/theory/ChapterDetail';
+import ConceptGalaxy from './pages/theory/ConceptGalaxy';
+import LearningJourney from './pages/theory/LearningJourney';
 function App() {
   return (
     <div className="w-screen h-screen bg-dark text-white">
@@ -27,6 +30,12 @@ function App() {
 
         {/* Shared */}
         <Route path="/result/:roomCode" element={<ResultPage />} />
+
+        {/* Theory / Knowledge Campus */}
+        <Route path="/theory" element={<TheoryDashboard />} />
+        <Route path="/theory/chapter/:id" element={<ChapterDetail />} />
+        <Route path="/theory/galaxy" element={<ConceptGalaxy />} />
+        <Route path="/theory/journey" element={<LearningJourney />} />
       </Routes>
     </div>
   );

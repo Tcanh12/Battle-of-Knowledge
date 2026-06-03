@@ -1,0 +1,85 @@
+export const flashcardsData = [
+  // Chương 1 (10 cards)
+  { id: "fc-c1-1", chapterId: "chuong-1", front: "CNXHKH theo nghĩa hẹp là gì?", back: "Là một trong ba bộ phận hợp thành chủ nghĩa Mác - Lênin.", type: "remember" },
+  { id: "fc-c1-2", chapterId: "chuong-1", front: "Ba bộ phận hợp thành Chủ nghĩa Mác - Lênin?", back: "1. Triết học Mác-Lênin\n2. Kinh tế chính trị Mác-Lênin\n3. Chủ nghĩa xã hội khoa học", type: "remember" },
+  { id: "fc-c1-3", chapterId: "chuong-1", front: "Tiền đề tư tưởng lý luận trực tiếp của CNXHKH?", back: "Chủ nghĩa xã hội không tưởng Pháp.", type: "remember" },
+  { id: "fc-c1-4", chapterId: "chuong-1", front: "Ba phát minh KHTN làm tiền đề cho chủ nghĩa Mác?", back: "Học thuyết tiến hóa, Định luật bảo toàn năng lượng, Học thuyết tế bào.", type: "remember" },
+  { id: "fc-c1-5", chapterId: "chuong-1", front: "Tác phẩm đánh dấu sự ra đời của CNXHKH?", back: "Tuyên ngôn của Đảng Cộng sản (1848).", type: "remember" },
+  { id: "fc-c1-6", chapterId: "chuong-1", front: "Vì sao phong trào công nhân cần lý luận khoa học?", back: "Để chuyển từ đấu tranh tự phát (đòi kinh tế) sang đấu tranh tự giác (giành chính quyền).", type: "understand" },
+  { id: "fc-c1-7", chapterId: "chuong-1", front: "Đối tượng nghiên cứu của CNXHKH?", back: "Quy luật chính trị - xã hội của quá trình chuyển biến từ CNTB lên CNXH và CNCS.", type: "remember" },
+  { id: "fc-c1-8", chapterId: "chuong-1", front: "Hạn chế lớn nhất của CNXH không tưởng?", back: "Chưa tìm ra quy luật phát triển của XH và chưa thấy được sứ mệnh của GCCN.", type: "understand" },
+  { id: "fc-c1-9", chapterId: "chuong-1", front: "Hai phát kiến vĩ đại của Mác?", back: "Chủ nghĩa duy vật lịch sử và Học thuyết giá trị thặng dư.", type: "remember" },
+  { id: "fc-c1-10", chapterId: "chuong-1", front: "Ý nghĩa của Tuyên ngôn 1848?", back: "Cương lĩnh chính trị, kim chỉ nam hành động của phong trào cộng sản và công nhân quốc tế.", type: "understand" },
+
+  // Chương 2 (10 cards)
+  { id: "fc-c2-1", chapterId: "chuong-2", front: "Giai cấp công nhân ra đời gắn với?", back: "Nền sản xuất đại công nghiệp TBCN.", type: "remember" },
+  { id: "fc-c2-2", chapterId: "chuong-2", front: "Đặc điểm kinh tế của GCCN trong CNTB?", back: "Không sở hữu TLSX chủ yếu, phải bán sức lao động và bị bóc lột giá trị thặng dư.", type: "remember" },
+  { id: "fc-c2-3", chapterId: "chuong-2", front: "Nội dung sứ mệnh lịch sử của GCCN?", back: "Xóa bỏ CNTB, xây dựng CNXH trên 3 phương diện: Kinh tế, CT-XH, Văn hóa-tư tưởng.", type: "understand" },
+  { id: "fc-c2-4", chapterId: "chuong-2", front: "Điều kiện khách quan quy định sứ mệnh của GCCN?", back: "Địa vị KT-XH: gắn với LLSX hiện đại, bị bóc lột triệt để, lợi ích phù hợp đa số nhân dân.", type: "understand" },
+  { id: "fc-c2-5", chapterId: "chuong-2", front: "Nhân tố chủ quan hàng đầu để GCCN hoàn thành sứ mệnh?", back: "Sự lãnh đạo của Đảng Cộng sản.", type: "remember" },
+  { id: "fc-c2-6", chapterId: "chuong-2", front: "Đảng Cộng sản là gì của GCCN?", back: "Là đội tiên phong, bộ tham mưu chiến đấu, đại biểu trung thành cho lợi ích GCCN.", type: "remember" },
+  { id: "fc-c2-7", chapterId: "chuong-2", front: "GCCN Việt Nam ra đời trong hoàn cảnh nào?", back: "Từ cuộc khai thác thuộc địa của thực dân Pháp (nước thuộc địa nửa phong kiến).", type: "remember" },
+  { id: "fc-c2-8", chapterId: "chuong-2", front: "Điểm đặc biệt của GCCN Việt Nam so với thế giới?", back: "Ra đời trước giai cấp tư sản dân tộc, sớm tiếp thu chủ nghĩa Mác-Lênin, gắn bó với nông dân.", type: "understand" },
+  { id: "fc-c2-9", chapterId: "chuong-2", front: "Nhiệm vụ trọng tâm của GCCN VN hiện nay?", back: "Đi đầu trong sự nghiệp Công nghiệp hóa - Hiện đại hóa đất nước.", type: "apply" },
+  { id: "fc-c2-10", chapterId: "chuong-2", front: "Vì sao GCCN có tính kỷ luật cao?", back: "Do điều kiện làm việc trong dây chuyền sản xuất đại công nghiệp đòi hỏi sự phối hợp chặt chẽ.", type: "understand" },
+
+  // Chương 3 (10 cards)
+  { id: "fc-c3-1", chapterId: "chuong-3", front: "CNXH là giai đoạn nào của hình thái KT-XH CSCN?", back: "Giai đoạn thấp (giai đoạn đầu).", type: "remember" },
+  { id: "fc-c3-2", chapterId: "chuong-3", front: "Mục tiêu cao nhất của CNXH?", back: "Giải phóng con người, phát triển toàn diện con người.", type: "understand" },
+  { id: "fc-c3-3", chapterId: "chuong-3", front: "Kinh tế xã hội XHCN dựa trên nền tảng nào?", back: "LLSX hiện đại và QHSX tiến bộ, phù hợp (công hữu về TLSX chủ yếu).", type: "remember" },
+  { id: "fc-c3-4", chapterId: "chuong-3", front: "Thời kỳ quá độ là gì?", back: "Thời kỳ cải biến cách mạng sâu sắc toàn bộ các lĩnh vực XH cũ sang XH mới, đan xen cũ-mới.", type: "understand" },
+  { id: "fc-c3-5", chapterId: "chuong-3", front: "Có mấy hình thức quá độ?", back: "2 hình thức: Quá độ trực tiếp (từ CNTB phát triển) và Gián tiếp (từ tiền TBCN).", type: "remember" },
+  { id: "fc-c3-6", chapterId: "chuong-3", front: "Việt Nam quá độ lên CNXH theo hình thức nào?", back: "Quá độ gián tiếp (bỏ qua chế độ TBCN).", type: "remember" },
+  { id: "fc-c3-7", chapterId: "chuong-3", front: "Hiểu đúng về 'Bỏ qua chế độ TBCN'?", back: "Bỏ qua sự thống trị của QHSX TBCN, nhưng tiếp thu, kế thừa thành tựu văn minh nhân loại.", type: "understand" },
+  { id: "fc-c3-8", chapterId: "chuong-3", front: "Vì sao quá độ ở VN là quá trình lâu dài, khó khăn?", back: "Vì xuất phát điểm rất thấp (nông nghiệp lạc hậu, hậu quả chiến tranh), phải xây mới hoàn toàn LLSX.", type: "apply" },
+  { id: "fc-c3-9", chapterId: "chuong-3", front: "Mô hình kinh tế tổng quát trong thời kỳ quá độ ở VN?", back: "Kinh tế thị trường định hướng xã hội chủ nghĩa.", type: "remember" },
+  { id: "fc-c3-10", chapterId: "chuong-3", front: "Đặc trưng về quyền lực trong XH XHCN?", back: "Do nhân dân lao động làm chủ.", type: "remember" },
+
+  // Chương 4 (10 cards)
+  { id: "fc-c4-1", chapterId: "chuong-4", front: "Nghĩa gốc của từ 'Dân chủ'?", back: "Quyền lực thuộc về nhân dân (Demos + Kratos).", type: "remember" },
+  { id: "fc-c4-2", chapterId: "chuong-4", front: "Bản chất của dân chủ XHCN?", back: "Là nền dân chủ rộng rãi nhất, quyền lực thực sự thuộc về nhân dân lao động.", type: "understand" },
+  { id: "fc-c4-3", chapterId: "chuong-4", front: "Nhà nước XHCN mang bản chất của giai cấp nào?", back: "Giai cấp công nhân.", type: "remember" },
+  { id: "fc-c4-4", chapterId: "chuong-4", front: "Chức năng cơ bản, quan trọng nhất của nhà nước XHCN?", back: "Tổ chức và xây dựng kinh tế, văn hóa, xã hội mới.", type: "understand" },
+  { id: "fc-c4-5", chapterId: "chuong-4", front: "Nhà nước pháp quyền XHCN VN là nhà nước của ai?", back: "Của nhân dân, do nhân dân, vì nhân dân.", type: "remember" },
+  { id: "fc-c4-6", chapterId: "chuong-4", front: "Đặc trưng quyền lực trong Nhà nước pháp quyền VN?", back: "Quyền lực thống nhất, có sự phân công, phối hợp, kiểm soát giữa các cơ quan.", type: "understand" },
+  { id: "fc-c4-7", chapterId: "chuong-4", front: "Mối quan hệ giữa dân chủ và nhà nước XHCN?", back: "Dân chủ là bản chất, nhà nước là công cụ pháp lý để bảo vệ và thực thi dân chủ.", type: "apply" },
+  { id: "fc-c4-8", chapterId: "chuong-4", front: "Khác biệt cốt lõi giữa dân chủ tư sản và dân chủ XHCN?", back: "DC tư sản phục vụ thiểu số (tài phiệt); DC XHCN phục vụ đa số nhân dân lao động.", type: "understand" },
+  { id: "fc-c4-9", chapterId: "chuong-4", front: "Công cụ quản lý xã hội tối thượng của Nhà nước pháp quyền?", back: "Hiến pháp và pháp luật.", type: "remember" },
+  { id: "fc-c4-10", chapterId: "chuong-4", front: "Vì sao Nhà nước XHCN mang tính dân tộc sâu sắc?", back: "Vì lợi ích của GCCN thống nhất với lợi ích dân tộc, nhà nước đại diện cho toàn thể dân tộc.", type: "understand" },
+
+  // Chương 5 (10 cards)
+  { id: "fc-c5-1", chapterId: "chuong-5", front: "Cơ cấu xã hội - giai cấp là gì?", back: "Hệ thống các giai cấp, tầng lớp XH và mối quan hệ giữa chúng.", type: "remember" },
+  { id: "fc-c5-2", chapterId: "chuong-5", front: "Cơ cấu XH-GC bị quy định bởi yếu tố nào?", back: "Cơ cấu kinh tế và trình độ phát triển của Lực lượng sản xuất.", type: "understand" },
+  { id: "fc-c5-3", chapterId: "chuong-5", front: "Nền tảng của liên minh giai cấp ở VN?", back: "Liên minh GCCN, giai cấp nông dân và đội ngũ trí thức.", type: "remember" },
+  { id: "fc-c5-4", chapterId: "chuong-5", front: "Vì sao phải liên minh công - nông - trí thức?", back: "Vì họ có lợi ích cơ bản thống nhất, để tạo thành lực lượng chính trị-XH to lớn bảo vệ chính quyền và xây CNXH.", type: "understand" },
+  { id: "fc-c5-5", chapterId: "chuong-5", front: "Nội dung trung tâm, nền tảng của liên minh là gì?", back: "Nội dung kinh tế (hợp tác sản xuất, chia sẻ lợi ích).", type: "remember" },
+  { id: "fc-c5-6", chapterId: "chuong-5", front: "Giai cấp nông dân VN biến đổi như thế nào hiện nay?", back: "Giảm về tỷ trọng, nhưng chất lượng nâng cao (nông dân trí thức hóa, sản xuất hàng hóa).", type: "apply" },
+  { id: "fc-c5-7", chapterId: "chuong-5", front: "Đội ngũ trí thức có vai trò gì trong KTTT và 4.0?", back: "Lực lượng lao động sáng tạo đặc biệt quan trọng, thúc đẩy KHCN và chuyển đổi số.", type: "understand" },
+  { id: "fc-c5-8", chapterId: "chuong-5", front: "Đội ngũ doanh nhân có vai trò gì?", back: "Lực lượng xung kích phát triển kinh tế, tạo việc làm, nâng cao tiềm lực quốc gia.", type: "apply" },
+  { id: "fc-c5-9", chapterId: "chuong-5", front: "Mối quan hệ giữa liên minh giai cấp và đại đoàn kết dân tộc?", back: "Liên minh là nòng cốt, nền tảng của khối đại đoàn kết toàn dân tộc.", type: "understand" },
+  { id: "fc-c5-10", chapterId: "chuong-5", front: "Mục đích của nội dung chính trị trong liên minh?", back: "Bảo vệ nền tảng tư tưởng, giữ vững ổn định chính trị, phát huy quyền làm chủ nhân dân.", type: "remember" },
+
+  // Chương 6 (10 cards)
+  { id: "fc-c6-1", chapterId: "chuong-6", front: "5 đặc trưng của dân tộc (theo nghĩa hẹp)?", back: "Chung lãnh thổ, chung kinh tế, chung ngôn ngữ, chung văn hóa tâm lý, có ý thức cộng đồng.", type: "remember" },
+  { id: "fc-c6-2", chapterId: "chuong-6", front: "3 nội dung Cương lĩnh dân tộc của Lênin?", back: "Các dân tộc hoàn toàn bình đẳng, quyền tự quyết, và liên hiệp công nhân các dân tộc.", type: "remember" },
+  { id: "fc-c6-3", chapterId: "chuong-6", front: "Quyền tự quyết dân tộc không bao hàm điều gì?", back: "Không bao hàm quyền lợi dụng ly khai để phá hoại toàn vẹn lãnh thổ quốc gia.", type: "understand" },
+  { id: "fc-c6-4", chapterId: "chuong-6", front: "Nguyên tắc cơ bản của chính sách dân tộc VN?", back: "Bình đẳng, đoàn kết, tôn trọng, giúp nhau cùng phát triển.", type: "remember" },
+  { id: "fc-c6-5", chapterId: "chuong-6", front: "Tôn giáo là gì?", back: "Hình thái ý thức XH phản ánh hiện thực một cách hư ảo, hoang đường.", type: "remember" },
+  { id: "fc-c6-6", chapterId: "chuong-6", front: "3 nguồn gốc của tôn giáo?", back: "Nguồn gốc tự nhiên, nguồn gốc xã hội, nguồn gốc nhận thức-tâm lý.", type: "remember" },
+  { id: "fc-c6-7", chapterId: "chuong-6", front: "Tính chất của tôn giáo trong quá độ lên CNXH?", back: "Tính lịch sử, tính quần chúng, tính chính trị.", type: "understand" },
+  { id: "fc-c6-8", chapterId: "chuong-6", front: "Khi nào tôn giáo mang tính chính trị?", back: "Khi bị các giai cấp bóc lột, thế lực thù địch lợi dụng phục vụ lợi ích chính trị phản động.", type: "understand" },
+  { id: "fc-c6-9", chapterId: "chuong-6", front: "Chính sách nhất quán của Nhà nước VN về tôn giáo?", back: "Tôn trọng và bảo đảm quyền tự do tín ngưỡng, tôn giáo và không tín ngưỡng.", type: "remember" },
+  { id: "fc-c6-10", chapterId: "chuong-6", front: "Cần phân biệt 2 mặt nào trong giải quyết vấn đề tôn giáo?", back: "Mặt tư tưởng (nhu cầu tâm linh) và mặt chính trị (sự lợi dụng chống phá).", type: "apply" },
+
+  // Chương 7 (10 cards)
+  { id: "fc-c7-1", chapterId: "chuong-7", front: "Cơ sở hình thành gia đình?", back: "Hôn nhân, huyết thống, nuôi dưỡng.", type: "remember" },
+  { id: "fc-c7-2", chapterId: "chuong-7", front: "Gia đình có vị trí như thế nào đối với xã hội?", back: "Gia đình là tế bào của xã hội, là tổ ấm, là cầu nối cá nhân - xã hội.", type: "remember" },
+  { id: "fc-c7-3", chapterId: "chuong-7", front: "4 chức năng cơ bản của gia đình?", back: "Tái sản xuất con người, kinh tế, giáo dục, thỏa mãn tâm lý - tình cảm.", type: "remember" },
+  { id: "fc-c7-4", chapterId: "chuong-7", front: "Chức năng nào là đặc thù, quyết định sự tồn tại của gia đình?", back: "Chức năng tái sản xuất ra con người.", type: "understand" },
+  { id: "fc-c7-5", chapterId: "chuong-7", front: "Cơ sở chính trị - xã hội để xây dựng gia đình XHCN?", back: "Nhà nước XHCN, pháp luật, các chính sách bảo vệ gia đình và bình đẳng giới.", type: "understand" },
+  { id: "fc-c7-6", chapterId: "chuong-7", front: "Đặc điểm hôn nhân tiến bộ?", back: "Tự nguyện, một vợ một chồng, bình đẳng, tôn trọng lẫn nhau.", type: "remember" },
+  { id: "fc-c7-7", chapterId: "chuong-7", front: "Sự biến đổi về quy mô gia đình VN hiện nay?", back: "Thu nhỏ lại, gia đình hạt nhân (2 thế hệ) trở nên phổ biến.", type: "apply" },
+  { id: "fc-c7-8", chapterId: "chuong-7", front: "Sự biến đổi chức năng giáo dục của gia đình hiện nay?", back: "Không còn khép kín, mà chia sẻ sự giáo dục với nhà trường và xã hội.", type: "understand" },
+  { id: "fc-c7-9", chapterId: "chuong-7", front: "Thách thức lớn nhất đối với chức năng tình cảm trong thời đại số?", back: "Sự lạm dụng thiết bị thông minh làm giảm giao tiếp trực tiếp, gây khoảng cách thế hệ.", type: "apply" },
+  { id: "fc-c7-10", chapterId: "chuong-7", front: "Mục tiêu xây dựng gia đình VN hiện nay?", back: "Gia đình no ấm, tiến bộ, hạnh phúc, văn minh.", type: "remember" }
+];
