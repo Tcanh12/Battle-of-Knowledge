@@ -148,7 +148,7 @@ const ChapterDetail = () => {
                         <div className="text-slate-400 mt-1"><Layers size={20}/></div>
                         <div>
                           <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-1">Gợi ý trực quan</h4>
-                          <p className="text-slate-700 font-medium text-sm sm:text-base">{section.visualSuggestion.type}: {section.visualSuggestion.description}</p>
+                          <p className="text-slate-700 font-medium text-sm sm:text-base">{typeof section.visualSuggestion === 'string' ? section.visualSuggestion : section.visualSuggestion?.description || ''}</p>
                         </div>
                       </div>
                     )}
@@ -158,7 +158,16 @@ const ChapterDetail = () => {
                         <h4 className="font-bold text-blue-800 mb-2 flex items-center gap-2 text-sm sm:text-base">
                           <AlertCircle size={18} /> Câu hỏi ôn tập nhanh
                         </h4>
-                        <p className="text-slate-700 font-medium text-sm sm:text-base">{section.checkQuestion}</p>
+                        <p className="text-slate-700 font-medium text-sm sm:text-base mb-1">
+                          <span className="font-bold text-blue-900 mr-1">Q:</span> 
+                          {typeof section.checkQuestion === 'string' ? section.checkQuestion : section.checkQuestion?.question || ''}
+                        </p>
+                        {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
+                          <p className="text-slate-600 text-sm sm:text-base mt-2 pl-4 border-l-2 border-blue-200">
+                            <span className="font-bold text-blue-700 mr-1">A:</span> 
+                            {section.checkQuestion.answer}
+                          </p>
+                        )}
                       </div>
                     )}
                   </div>
