@@ -18,7 +18,7 @@ import NotFoundPage from './pages/NotFoundPage';
 const TheoryDashboard = lazy(() => import('./pages/theory/TheoryDashboard'));
 const ChapterDetail = lazy(() => import('./pages/theory/ChapterDetail'));
 const ConceptGalaxy = lazy(() => import('./pages/theory/ConceptGalaxy'));
-const LearningJourney = lazy(() => import('./pages/theory/LearningJourney'));
+const TheoryTimelinePage = lazy(() => import('./pages/theory/TheoryTimelinePage'));
 const FeatureStandalone = lazy(() => import('./pages/theory/FeatureStandalone'));
 
 function App() {
@@ -60,8 +60,8 @@ function App() {
                   <Route path="concept-galaxy" element={<ConceptGalaxy />} />
                   
                   {/* Timeline routes */}
-                  <Route path="journey" element={<LearningJourney />} />
-                  <Route path="timeline" element={<LearningJourney />} />
+                  <Route path="journey" element={<TheoryTimelinePage />} />
+                  <Route path="timeline" element={<TheoryTimelinePage />} />
                   
                   {/* Standalone feature aliases (redirecting to FeatureStandalone) */}
                   <Route path="case-lab" element={<FeatureStandalone title="Case Lab Tổng Hợp" />} />

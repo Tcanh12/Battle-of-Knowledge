@@ -59,10 +59,35 @@ export function markConceptUnderstood(conceptId) {
 
 export function markTimelineViewed(eventId) {
   try {
+    // Keep backward compatibility with old progress
     const p = getProgress();
-    if (!p.viewedTimelineEvents.includes(eventId)) p.viewedTimelineEvents.push(eventId);
-    saveProgress(p);
+    if (!p.viewedTimelineEvents.includes(eventId)) {
+      p.viewedTimelineEvents.push(eventId);
+      saveProgress(p);
+    }
+    
+    // Use the specific key requested by user
+    const specificKey = "cnxhkh_viewed_timeline_events";
+    const raw = localStorage.getItem(specificKey);
+    let viewed = [];
+    if (raw) viewed = JSON.parse(raw);
+    if (!viewed.includes(eventId)) {
+      viewed.push(eventId);
+      localStorage.setItem(specificKey, JSON.stringify(viewed));
+    }
   } catch {}
+}
+
+export function getViewedTimelineEvents() {
+  try {
+    const raw = localStorage.getItem("cnxhkh_viewed_timeline_events");
+    if (raw) return JSON.parse(raw);
+    
+    // Fallback to old format
+    return getProgress().viewedTimelineEvents || [];
+  } catch {
+    return [];
+  }
 }
 
 export function markCaseCompleted(caseId) {
