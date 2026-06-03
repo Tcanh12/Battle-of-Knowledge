@@ -1,6 +1,6 @@
 # BỘ CÂU HỎI TRẮC NGHIỆM CHỦ NGHĨA XÃ HỘI KHOA HỌC
 
-## Câu 1
+### Câu 1
 
 **Chủ đề:** Sự ra đời của Chủ nghĩa xã hội khoa học
 **Độ khó:** Dễ
@@ -18,7 +18,7 @@ D. Hêghen và Phoiơbắc
 
 ---
 
-## Câu 2
+### Câu 2
 
 **Chủ đề:** Sự ra đời của Chủ nghĩa xã hội khoa học
 **Độ khó:** Dễ
@@ -36,7 +36,7 @@ D. 5
 
 ---
 
-## Câu 3
+### Câu 3
 
 **Chủ đề:** Sự ra đời của Chủ nghĩa xã hội khoa học
 **Độ khó:** Trung bình
@@ -54,7 +54,7 @@ D. Sự biến mất của giai cấp công nhân
 
 ---
 
-## Câu 4
+### Câu 4
 
 **Chủ đề:** Sự ra đời của Chủ nghĩa xã hội khoa học
 **Độ khó:** Trung bình
@@ -72,7 +72,7 @@ D. Kinh tế phong kiến, tư tưởng nô lệ và triết học kinh viện
 
 ---
 
-## Câu 5
+### Câu 5
 
 **Chủ đề:** Sự ra đời của Chủ nghĩa xã hội khoa học
 **Độ khó:** Khó
@@ -90,7 +90,7 @@ D. Chủ nghĩa xã hội khoa học phủ nhận hoàn toàn đấu tranh giai 
 
 ---
 
-## Câu 6
+### Câu 6
 
 **Chủ đề:** Giai cấp công nhân
 **Độ khó:** Dễ
@@ -108,7 +108,7 @@ D. Tầng lớp quý tộc
 
 ---
 
-## Câu 7
+### Câu 7
 
 **Chủ đề:** Giai cấp công nhân
 **Độ khó:** Dễ
@@ -126,7 +126,7 @@ D. Kinh tế phong kiến
 
 ---
 
-## Câu 8
+### Câu 8
 
 **Chủ đề:** Giai cấp công nhân
 **Độ khó:** Trung bình
@@ -144,7 +144,7 @@ D. Không tham gia vào đời sống chính trị
 
 ---
 
-## Câu 9
+### Câu 9
 
 **Chủ đề:** Giai cấp công nhân
 **Độ khó:** Trung bình
@@ -162,7 +162,7 @@ D. Vì không chịu tác động của nền sản xuất hiện đại
 
 ---
 
-## Câu 10
+### Câu 10
 
 **Chủ đề:** Giai cấp công nhân
 **Độ khó:** Khó
@@ -180,7 +180,7 @@ D. Là tầng lớp không còn liên quan đến sản xuất xã hội
 
 ---
 
-## Câu 11
+### Câu 11
 
 **Chủ đề:** Đảng Cộng sản
 **Độ khó:** Dễ
@@ -198,7 +198,7 @@ D. Tầng lớp quý tộc
 
 ---
 
-## Câu 12
+### Câu 12
 
 **Chủ đề:** Đảng Cộng sản
 **Độ khó:** Trung bình
@@ -216,7 +216,7 @@ D. Để không cần lý luận cách mạng
 
 ---
 
-## Câu 13
+### Câu 13
 
 **Chủ đề:** Đảng Cộng sản
 **Độ khó:** Trung bình
@@ -234,7 +234,7 @@ D. Kinh tế thị trường với chủ nghĩa thực dụng
 
 ---
 
-## Câu 14
+### Câu 14
 
 **Chủ đề:** Đảng Cộng sản
 **Độ khó:** Khó
@@ -252,7 +252,7 @@ D. Không cần gắn bó với quần chúng
 
 ---
 
-## Câu 15
+### Câu 15
 
 **Chủ đề:** Đảng Cộng sản
 **Độ khó:** Trung bình
@@ -270,7 +270,7 @@ D. Đảng Cộng sản không cần lý luận khoa học
 
 ---
 
-## Câu 16
+### Câu 16
 
 **Chủ đề:** Thời kỳ quá độ
 **Độ khó:** Dễ
@@ -288,7 +288,7 @@ D. Giai đoạn chỉ phát triển kinh tế, không cần chính trị
 
 ---
 
-## Câu 17
+### Câu 17
 
 **Chủ đề:** Thời kỳ quá độ
 **Độ khó:** Dễ
@@ -306,7 +306,7 @@ D. Không có mâu thuẫn xã hội
 
 ---
 
-## Câu 18
+### Câu 18
 
 **Chủ đề:** Thời kỳ quá độ
 **Độ khó:** Trung bình
@@ -324,7 +324,7 @@ D. Vì chỉ có một hình thức sở hữu duy nhất
 
 ---
 
-## Câu 19
+### Câu 19
 
 **Chủ đề:** Chủ nghĩa xã hội
 **Độ khó:** Trung bình
@@ -342,7 +342,7 @@ D. Không cần công bằng xã hội
 
 ---
 
-## Câu 20
+### Câu 20
 
 **Chủ đề:** Chủ nghĩa xã hội
 **Độ khó:** Khó
@@ -360,7 +360,7 @@ D. Không cần phát triển lực lượng sản xuất
 
 ---
 
-## Câu 21
+### Câu 21
 
 **Chủ đề:** Dân chủ xã hội chủ nghĩa
 **Độ khó:** Dễ
@@ -378,7 +378,7 @@ D. Nhân dân không tham gia quản lý xã hội
 
 ---
 
-## Câu 22
+### Câu 22
 
 **Chủ đề:** Dân chủ xã hội chủ nghĩa
 **Độ khó:** Dễ
@@ -396,7 +396,7 @@ D. Sự thờ ơ của nhân dân với chính trị
 
 ---
 
-## Câu 23
+### Câu 23
 
 **Chủ đề:** Dân chủ xã hội chủ nghĩa
 **Độ khó:** Trung bình
@@ -414,7 +414,7 @@ D. Không cần thiết chế chính trị
 
 ---
 
-## Câu 24
+### Câu 24
 
 **Chủ đề:** Dân chủ xã hội chủ nghĩa
 **Độ khó:** Trung bình
@@ -432,7 +432,7 @@ D. Quyền sử dụng mạng xã hội để giải trí
 
 ---
 
-## Câu 25
+### Câu 25
 
 **Chủ đề:** Dân chủ xã hội chủ nghĩa
 **Độ khó:** Khó
@@ -450,7 +450,7 @@ D. Chỉ nhóm bạn thân được quyết
 
 ---
 
-## Câu 26
+### Câu 26
 
 **Chủ đề:** Nhà nước xã hội chủ nghĩa
 **Độ khó:** Dễ
@@ -468,7 +468,7 @@ D. Của các thế lực bên ngoài
 
 ---
 
-## Câu 27
+### Câu 27
 
 **Chủ đề:** Nhà nước xã hội chủ nghĩa
 **Độ khó:** Trung bình
@@ -486,7 +486,7 @@ D. Không cần bảo vệ lợi ích nhân dân
 
 ---
 
-## Câu 28
+### Câu 28
 
 **Chủ đề:** Nhà nước xã hội chủ nghĩa
 **Độ khó:** Trung bình
@@ -504,7 +504,7 @@ D. Không liên quan đến đời sống xã hội
 
 ---
 
-## Câu 29
+### Câu 29
 
 **Chủ đề:** Nhà nước xã hội chủ nghĩa
 **Độ khó:** Khó
@@ -522,7 +522,7 @@ D. Tất cả các ý trên
 
 ---
 
-## Câu 30
+### Câu 30
 
 **Chủ đề:** Nhà nước xã hội chủ nghĩa
 **Độ khó:** Trung bình
@@ -540,7 +540,7 @@ D. Quyền lực tùy tiện
 
 ---
 
-## Câu 31
+### Câu 31
 
 **Chủ đề:** Cơ cấu xã hội - giai cấp
 **Độ khó:** Dễ
@@ -558,7 +558,7 @@ D. Chỉ một cá nhân lãnh đạo
 
 ---
 
-## Câu 32
+### Câu 32
 
 **Chủ đề:** Cơ cấu xã hội - giai cấp
 **Độ khó:** Trung bình
@@ -576,7 +576,7 @@ D. Để chỉ phát triển một nhóm người
 
 ---
 
-## Câu 33
+### Câu 33
 
 **Chủ đề:** Cơ cấu xã hội - giai cấp
 **Độ khó:** Trung bình
@@ -594,7 +594,7 @@ D. Không liên quan đến kinh tế
 
 ---
 
-## Câu 34
+### Câu 34
 
 **Chủ đề:** Cơ cấu xã hội - giai cấp
 **Độ khó:** Khó
@@ -612,7 +612,7 @@ D. Chỉ quan tâm lợi ích cá nhân
 
 ---
 
-## Câu 35
+### Câu 35
 
 **Chủ đề:** Cơ cấu xã hội - giai cấp
 **Độ khó:** Trung bình
@@ -630,7 +630,7 @@ D. Không cần gắn với nhân dân
 
 ---
 
-## Câu 36
+### Câu 36
 
 **Chủ đề:** Dân tộc
 **Độ khó:** Dễ
@@ -648,7 +648,7 @@ D. Không quan tâm đến văn hóa dân tộc
 
 ---
 
-## Câu 37
+### Câu 37
 
 **Chủ đề:** Dân tộc
 **Độ khó:** Trung bình
@@ -666,7 +666,7 @@ D. Không ảnh hưởng đến xã hội
 
 ---
 
-## Câu 38
+### Câu 38
 
 **Chủ đề:** Tôn giáo
 **Độ khó:** Trung bình
@@ -684,7 +684,7 @@ D. Không cần phân biệt tín ngưỡng, tôn giáo và mê tín dị đoan
 
 ---
 
-## Câu 39
+### Câu 39
 
 **Chủ đề:** Dân tộc và tôn giáo
 **Độ khó:** Khó
@@ -702,7 +702,7 @@ D. Xem đó là chuyện bình thường, không ảnh hưởng gì
 
 ---
 
-## Câu 40
+### Câu 40
 
 **Chủ đề:** Tôn giáo
 **Độ khó:** Trung bình
@@ -720,7 +720,7 @@ D. Sinh hoạt cộng đồng lành mạnh
 
 ---
 
-## Câu 41
+### Câu 41
 
 **Chủ đề:** Gia đình
 **Độ khó:** Dễ
@@ -738,7 +738,7 @@ D. Một nhóm không có vai trò giáo dục
 
 ---
 
-## Câu 42
+### Câu 42
 
 **Chủ đề:** Gia đình
 **Độ khó:** Trung bình
@@ -756,7 +756,7 @@ D. Không liên quan đến văn hóa
 
 ---
 
-## Câu 43
+### Câu 43
 
 **Chủ đề:** Gia đình
 **Độ khó:** Trung bình
@@ -774,7 +774,7 @@ D. Chỉ có ý nghĩa trong phạm vi cá nhân
 
 ---
 
-## Câu 44
+### Câu 44
 
 **Chủ đề:** Gia đình
 **Độ khó:** Khó
@@ -792,7 +792,7 @@ D. Xem nhẹ giáo dục đạo đức
 
 ---
 
-## Câu 45
+### Câu 45
 
 **Chủ đề:** Gia đình
 **Độ khó:** Trung bình
@@ -810,7 +810,7 @@ D. Chỉ áp dụng trong công việc, không áp dụng trong gia đình
 
 ---
 
-## Câu 46
+### Câu 46
 
 **Chủ đề:** Liên hệ thực tiễn
 **Độ khó:** Dễ
@@ -828,7 +828,7 @@ D. Không cần liên hệ đời sống
 
 ---
 
-## Câu 47
+### Câu 47
 
 **Chủ đề:** Liên hệ thực tiễn
 **Độ khó:** Trung bình
@@ -846,7 +846,7 @@ D. Chỉ đọc tiêu đề rồi kết luận
 
 ---
 
-## Câu 48
+### Câu 48
 
 **Chủ đề:** Liên hệ thực tiễn
 **Độ khó:** Trung bình
@@ -864,7 +864,7 @@ D. Chỉ xem nội dung giải trí, không cần tài liệu chuẩn
 
 ---
 
-## Câu 49
+### Câu 49
 
 **Chủ đề:** Liên hệ thực tiễn / Game hóa học tập
 **Độ khó:** Khó
@@ -882,7 +882,7 @@ D. Để bỏ qua giáo trình
 
 ---
 
-## Câu 50
+### Câu 50
 
 **Chủ đề:** Liên hệ thực tiễn / Thiết kế game học tập
 **Độ khó:** Khó
