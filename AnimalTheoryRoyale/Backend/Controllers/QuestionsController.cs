@@ -41,7 +41,7 @@ public class QuestionsController : ControllerBase
         return Ok(topics);
     }
 
-    [HttpDelete("clear")]
+    [HttpGet("clear")]
     public async Task<IActionResult> ClearQuestions()
     {
         var options = await _context.QuestionOptions.ToListAsync();
