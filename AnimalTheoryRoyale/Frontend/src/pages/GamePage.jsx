@@ -167,7 +167,7 @@ export default function GamePage() {
 
   if (!connected || connectionState === 'connecting') {
     return (
-      <div className="w-full h-full flex items-center justify-center bg-dark">
+      <div className="w-full h-screen flex items-center justify-center bg-dark">
         <div className="text-center">
           <div className="text-4xl mb-4 animate-spin">⏳</div>
           <p className="text-xl font-bold">Đang kết nối vào trận đấu...</p>
@@ -178,7 +178,7 @@ export default function GamePage() {
   const isHost = gameState?.hostConnectionId === myConnectionId;
 
   return (
-    <div className="relative w-full h-full bg-black" style={{ touchAction: 'none' }}>
+    <div className="relative w-full h-screen bg-black" style={{ touchAction: 'none' }}>
       {/* Reconnecting Overlay */}
       <AnimatePresence>
         {connectionState === 'reconnecting' && (

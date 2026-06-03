@@ -39,7 +39,7 @@ export default function HostDashboardPage() {
   }, [roomCode, navigate]);
 
   return (
-    <div className="w-full h-full flex flex-col bg-dark text-white overflow-hidden relative">
+    <div className="w-full h-screen flex flex-col bg-dark text-white overflow-hidden relative">
       {/* Return Home Button (Overlay) */}
       <button 
         onClick={() => setShowConfirm(true)}
