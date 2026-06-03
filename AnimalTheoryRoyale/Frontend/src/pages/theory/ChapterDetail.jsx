@@ -159,41 +159,51 @@ const ChapterDetail = () => {
                     )}
 
                     {section.checkQuestion && (
-                      <div className="bg-blue-50/50 rounded-xl p-4 sm:p-6 border border-blue-100 mt-6">
+                      <div className="bg-gradient-to-br from-blue-50 to-indigo-50/30 rounded-xl p-4 sm:p-6 border border-blue-100 mt-8 shadow-sm">
                         <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2 text-sm sm:text-base">
                           <AlertCircle size={18} /> Câu hỏi ôn tập nhanh
                         </h4>
-                        <div className="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
-                          <p className="text-slate-700 font-medium text-sm sm:text-base">
-                            <span className="font-bold text-blue-900 mr-2 text-lg">Q:</span> 
-                            {typeof section.checkQuestion === 'string' ? section.checkQuestion : section.checkQuestion?.question || ''}
-                          </p>
-                          
-                          {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
-                            <div className="mt-4 pt-4 border-t border-slate-100">
-                              {!revealedQuestions[idx] ? (
-                                <button 
-                                  onClick={() => toggleQuestion(idx)}
-                                  className="text-sm font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1.5 transition-colors bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg"
-                                >
-                                  Xem đáp án
-                                </button>
-                              ) : (
-                                <div className="animate-in fade-in slide-in-from-top-2">
-                                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                                    <span className="font-bold text-emerald-600 mr-2 text-lg">A:</span> 
-                                    {section.checkQuestion.answer}
-                                  </p>
-                                  <button 
-                                    onClick={() => toggleQuestion(idx)}
-                                    className="text-xs font-medium text-slate-400 hover:text-slate-600 mt-3 inline-flex items-center"
-                                  >
-                                    Thu gọn
-                                  </button>
-                                </div>
+                        
+                        <div 
+                          className="relative w-full perspective-1000 group cursor-pointer"
+                          style={{ perspective: '1000px' }}
+                          onClick={() => toggleQuestion(idx)}
+                        >
+                          <div 
+                            className="w-full relative transition-transform duration-500"
+                            style={{ 
+                              transformStyle: 'preserve-3d', 
+                              transform: revealedQuestions[idx] ? 'rotateX(180deg)' : 'rotateX(0)',
+                              minHeight: '120px'
+                            }}
+                          >
+                            {/* FRONT OF CARD (Question) */}
+                            <div 
+                              className="absolute inset-0 w-full h-full bg-white rounded-xl border-2 border-blue-200 shadow-sm p-5 flex flex-col justify-center items-center text-center backface-hidden"
+                              style={{ backfaceVisibility: 'hidden' }}
+                            >
+                              <p className="text-slate-800 font-bold text-base sm:text-lg">
+                                {typeof section.checkQuestion === 'string' ? section.checkQuestion : section.checkQuestion?.question || ''}
+                              </p>
+                              {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
+                                <p className="text-xs text-slate-400 mt-4 uppercase font-bold tracking-wider animate-pulse">
+                                  Nhấn để xem đáp án
+                                </p>
                               )}
                             </div>
-                          )}
+                            
+                            {/* BACK OF CARD (Answer) */}
+                            {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
+                              <div 
+                                className="absolute inset-0 w-full h-full bg-blue-600 rounded-xl border-2 border-blue-600 shadow-md p-5 flex flex-col justify-center items-center text-center backface-hidden"
+                                style={{ backfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
+                              >
+                                <p className="text-white font-medium text-sm sm:text-base leading-relaxed">
+                                  {section.checkQuestion.answer}
+                                </p>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
                     )}

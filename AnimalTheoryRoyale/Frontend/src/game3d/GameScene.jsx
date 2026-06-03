@@ -1,4 +1,4 @@
-import { Sky } from '@react-three/drei';
+
 import { useFrame, useThree } from '@react-three/fiber';
 import { useRef, useCallback, useEffect } from 'react';
 import * as THREE from 'three';
@@ -311,7 +311,7 @@ export default function GameScene({
 
   return (
     <group onPointerDown={handleShoot} onWheel={handleWheel}>
-      <Sky sunPosition={[100, 40, 100]} turbidity={0.3} rayleigh={0.5} />
+
       <ambientLight intensity={0.4} />
       <directionalLight castShadow position={[80, 100, 40]} intensity={1.2}
         shadow-mapSize-width={2048} shadow-mapSize-height={2048}

@@ -215,7 +215,7 @@ export default function GamePage() {
 
       {/* 3D Canvas */}
       <div className="absolute inset-0">
-        <Canvas shadows={!isMobile} dpr={isMobile ? [1, 1.2] : [1, 2]} gl={{ powerPreference: "high-performance", antialias: !isMobile }} camera={{ position: [0, 40, 40], fov: 50 }}>
+        <Canvas shadows={!isMobile} dpr={Math.min(window.devicePixelRatio, 2)} camera={{ position: [0, 40, 40], fov: 50 }}>
           <color attach="background" args={['#1a1a2e']} />
           <GameScene
             gameState={gameState}

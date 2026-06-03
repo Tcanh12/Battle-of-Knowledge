@@ -165,24 +165,38 @@ import { caseLabData } from '../data/caseLabData';
 
 export function getChapterProgress(chapterId) {
   const p = getProgress();
-  const theoryCompleted = p.completedSections[chapterId]?.includes('theory') || false;
-  const flashcardsCompleted = p.completedSections[chapterId]?.includes('flashcards') || false;
-  const caseStudyCompleted = p.completedSections[chapterId]?.includes('cases') || false;
   
-  const hasFlashcards = Array.isArray(flashcardsData) && flashcardsData.some(fc => fc.chapterId === chapterId);
-  const hasCases = Array.isArray(caseLabData) && caseLabData.some(c => c.chapterId === chapterId);
+  const theoryCompleted = p.completedSections[chapterId]?.includes('theory') || false;
+  
+  const chapterFlashcards = Array.isArray(flashcardsData) ? flashcardsData.filter(fc => fc.chapterId === chapterId) : [];
+  const hasFlashcards = chapterFlashcards.length > 0;
+  let completedFlashcardsCount = 0;
+  if (hasFlashcards && p.flashcardMemory) {
+    completedFlashcardsCount = chapterFlashcards.filter(fc => p.flashcardMemory[fc.id]).length;
+  }
+  const flashcardsPercentage = hasFlashcards ? (completedFlashcardsCount / chapterFlashcards.length) : 0;
+  const flashcardsCompleted = flashcardsPercentage >= 1;
+
+  const chapterCases = Array.isArray(caseLabData) ? caseLabData.filter(c => c.chapterId === chapterId) : [];
+  const hasCases = chapterCases.length > 0;
+  let completedCasesCount = 0;
+  if (hasCases && p.completedCases) {
+    completedCasesCount = chapterCases.filter(c => p.completedCases.includes(c.id)).length;
+  }
+  const casesPercentage = hasCases ? (completedCasesCount / chapterCases.length) : 0;
+  const caseStudyCompleted = casesPercentage >= 1;
   
   let totalWeight = 40;
   let currentScore = theoryCompleted ? 40 : 0;
   
   if (hasFlashcards) {
     totalWeight += 30;
-    if (flashcardsCompleted) currentScore += 30;
+    currentScore += (30 * flashcardsPercentage);
   }
   
   if (hasCases) {
     totalWeight += 30;
-    if (caseStudyCompleted) currentScore += 30;
+    currentScore += (30 * casesPercentage);
   }
   
   return {
