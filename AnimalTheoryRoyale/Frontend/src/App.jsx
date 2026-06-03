@@ -12,6 +12,7 @@ import PlayerLobbyPage from './pages/PlayerLobbyPage';
 import HostDashboardPage from './pages/HostDashboardPage';
 import GamePage from './pages/GamePage';
 import ResultPage from './pages/ResultPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Lazy load Theory Pages to prevent Dashboard lag
 const TheoryDashboard = lazy(() => import('./pages/theory/TheoryDashboard'));
@@ -68,10 +69,16 @@ function App() {
                   <Route path="debate-cards" element={<FeatureStandalone title="Thẻ Tranh Biện (Debate)" />} />
                   <Route path="flashcards" element={<FeatureStandalone title="Bộ thẻ nhớ Flashcards" />} />
                   <Route path="review-sprint" element={<FeatureStandalone title="Review Sprint (Ôn Tập Chớp Nhoáng)" />} />
+                  
+                  {/* Catch all for theory routes */}
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </Suspense>
             } 
           />
+
+          {/* Catch all for main routes */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </ErrorBoundary>
     </div>

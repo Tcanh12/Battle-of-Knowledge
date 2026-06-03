@@ -86,13 +86,23 @@ const ConceptGalaxy = () => {
     });
   }, [nodes, rawEdges]);
 
-  if (rawNodes.length === 0) {
+  if (!rawNodes || rawNodes.length === 0) {
     return (
-      <div className="min-h-screen w-full bg-slate-50 flex flex-col relative">
-        <button onClick={() => navigate('/theory')} className="absolute top-4 left-4 z-10 flex items-center gap-2 text-slate-600 hover:text-blue-600">
-          <ArrowLeft size={20} /> Quay lại
-        </button>
-        <EmptyState title="Dữ liệu Galaxy đang được cập nhật" />
+      <div className="min-h-screen bg-slate-50 px-4 py-16 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-3xl rounded-2xl border bg-white p-8 text-center shadow-sm">
+          <h1 className="text-2xl font-bold text-slate-900">
+            Nội dung bản đồ tri thức đang được cập nhật.
+          </h1>
+          <p className="mt-3 text-slate-600">
+            Vui lòng quay lại trang học tập hoặc thử lại sau.
+          </p>
+          <button
+            onClick={() => navigate('/theory')}
+            className="mt-6 inline-flex rounded-xl bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800 transition-colors"
+          >
+            Về trang học tập
+          </button>
+        </div>
       </div>
     );
   }

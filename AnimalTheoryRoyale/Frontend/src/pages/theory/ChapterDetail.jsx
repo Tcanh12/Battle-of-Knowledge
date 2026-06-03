@@ -31,11 +31,21 @@ const ChapterDetail = () => {
 
   if (!chapter) {
     return (
-      <div className="min-h-screen bg-slate-50 flex flex-col relative">
-        <button onClick={() => navigate('/theory')} className="absolute top-4 left-4 sm:top-8 sm:left-8 z-10 flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors">
-          <ArrowLeft size={20} /> Về Dashboard
-        </button>
-        <EmptyState title="Không tìm thấy nội dung chương này" description="Vui lòng kiểm tra lại đường dẫn hoặc quay lại trang chủ." />
+      <div className="min-h-screen bg-slate-50 px-4 py-16 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-3xl rounded-2xl border bg-white p-8 text-center shadow-sm">
+          <h1 className="text-2xl font-bold text-slate-900">
+            Không tìm thấy nội dung chương này.
+          </h1>
+          <p className="mt-3 text-slate-600">
+            Chương bạn đang mở không tồn tại hoặc dữ liệu chưa được cập nhật.
+          </p>
+          <button
+            onClick={() => navigate('/theory/journey')}
+            className="mt-6 inline-flex rounded-xl bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800 transition-colors"
+          >
+            Quay lại danh sách chương
+          </button>
+        </div>
       </div>
     );
   }
