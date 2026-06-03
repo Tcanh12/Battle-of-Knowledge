@@ -5,7 +5,7 @@ import { chaptersData } from '../../data/chaptersData';
 import { flashcardsData } from '../../data/flashcardsData';
 import { caseLabData } from '../../data/caseLabData';
 import { ProgressBar, Flashcard, CaseStudy } from '../../components/theory';
-import { getProgress, updateProgress } from '../../utils/progressStorage';
+import { getChapterProgress, updateProgress } from '../../utils/progressStorage';
 
 const ChapterDetail = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const ChapterDetail = () => {
 
   useEffect(() => {
     if (chapter) {
-      setProgress(getProgress(chapter.id));
+      setProgress(getChapterProgress(chapter.id));
     }
   }, [chapter]);
 

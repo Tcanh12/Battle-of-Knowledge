@@ -133,3 +133,49 @@ export function setLastLearningPath(path) {
 export function resetProgress() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(getDefaultProgress())); } catch {}
 }
+
+// New helper functions for Theory UI
+export function getChapterProgress(chapterId) {
+  const p = getProgress();
+  const theoryCompleted = p.completedSections[chapterId]?.includes('theory') || false;
+  const flashcardsCompleted = p.completedSections[chapterId]?.includes('flashcards') || false;
+  const caseStudyCompleted = p.completedSections[chapterId]?.includes('cases') || false;
+  
+  let score = 0;
+  if (theoryCompleted) score += 40;
+  if (flashcardsCompleted) score += 30;
+  if (caseStudyCompleted) score += 30;
+  
+  return {
+    theoryCompleted,
+    flashcardsCompleted,
+    caseStudyCompleted,
+    completionPercentage: score
+  };
+}
+
+export function updateProgress(chapterId, key, value) {
+  const p = getProgress();
+  if (!p.completedSections[chapterId]) p.completedSections[chapterId] = [];
+  
+  let sectionKey = '';
+  if (key === 'theoryCompleted') sectionKey = 'theory';
+  if (key === 'flashcardsCompleted') sectionKey = 'flashcards';
+  if (key === 'caseStudyCompleted') sectionKey = 'cases';
+  
+  if (value && sectionKey && !p.completedSections[chapterId].includes(sectionKey)) {
+    p.completedSections[chapterId].push(sectionKey);
+  }
+  
+  saveProgress(p);
+  return getChapterProgress(chapterId);
+}
+
+export function getOverallProgress() {
+  let totalScore = 0;
+  for (let i = 1; i <= 7; i++) {
+    const cp = getChapterProgress(`chuong-${i}`);
+    totalScore += cp.completionPercentage;
+  }
+  return totalScore / 7;
+}

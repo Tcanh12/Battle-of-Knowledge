@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, Map, Award, ArrowLeft, Gamepad2 } from 'lucide-react';
 import { chaptersData } from '../../data/chaptersData';
-import { getProgress, getOverallProgress } from '../../utils/progressStorage';
+import { getChapterProgress, getOverallProgress } from '../../utils/progressStorage';
 import { ChapterMissionCard } from '../../components/theory';
 import { OLD_GAME_URL } from '../../config/gameConfig';
 
@@ -83,7 +83,7 @@ const TheoryDashboard = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {chaptersData.map(chapter => {
-            const progress = getProgress(chapter.id);
+            const progress = getChapterProgress(chapter.id);
             return (
               <ChapterMissionCard 
                 key={chapter.id} 
