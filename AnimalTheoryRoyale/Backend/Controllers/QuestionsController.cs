@@ -41,6 +41,19 @@ public class QuestionsController : ControllerBase
         return Ok(topics);
     }
 
+    [HttpDelete("clear")]
+    public async Task<IActionResult> ClearQuestions()
+    {
+        var options = await _context.QuestionOptions.ToListAsync();
+        _context.QuestionOptions.RemoveRange(options);
+        
+        var questions = await _context.Questions.ToListAsync();
+        _context.Questions.RemoveRange(questions);
+        
+        await _context.SaveChangesAsync();
+        return Ok(new { message = "All questions and options have been successfully cleared from the database." });
+    }
+
     [HttpGet("seed")]
     public async Task<IActionResult> SeedSampleData()
     {
