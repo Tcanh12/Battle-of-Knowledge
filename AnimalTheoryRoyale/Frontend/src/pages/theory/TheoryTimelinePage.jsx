@@ -7,11 +7,11 @@ import { timelineEvents } from '../../data/timelineData';
 import { getViewedTimelineEvents, markTimelineViewed } from '../../utils/progressStorage';
 
 import TimelineHero from '../../components/timeline/TimelineHero';
+import TimelineProgressCard from '../../components/timeline/TimelineProgressCard';
+import TimelinePhaseOverview from '../../components/timeline/TimelinePhaseOverview';
 import TimelinePhaseTabs from '../../components/timeline/TimelinePhaseTabs';
-import TimelineFlow from '../../components/timeline/TimelineFlow';
 import TimelineEventCard from '../../components/timeline/TimelineEventCard';
 import TimelineDetailPanel from '../../components/timeline/TimelineDetailPanel';
-import TimelineProgress from '../../components/timeline/TimelineProgress';
 
 const TheoryTimelinePage = () => {
   const navigate = useNavigate();
@@ -48,6 +48,28 @@ const TheoryTimelinePage = () => {
     });
   }, [activePhase, searchQuery, safeEvents]);
 
+  // Determine the next unviewed event
+  const nextEvent = useMemo(() => {
+    return safeEvents.find(event => !viewedEvents.includes(event.id));
+  }, [safeEvents, viewedEvents]);
+
+  const handleStartOrContinue = () => {
+    if (nextEvent) {
+      // Find its element and scroll to it smoothly
+      const element = document.getElementById(nextEvent.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Auto open after scroll
+        setTimeout(() => handleViewDetail(nextEvent), 500);
+      } else {
+        handleViewDetail(nextEvent);
+      }
+    } else {
+      // Completed all
+      navigate('/theory');
+    }
+  };
+
   if (safeEvents.length === 0) {
     return (
       <div className="min-h-screen bg-slate-50 flex flex-col relative">
@@ -75,9 +97,24 @@ const TheoryTimelinePage = () => {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-          <TimelineHero />
           
-          <TimelineProgress total={safeEvents.length} viewed={viewedEvents.length} />
+          {/* Top Hero & Progress Area */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            <div className="lg:col-span-7 xl:col-span-8">
+              <TimelineHero />
+            </div>
+            <div className="lg:col-span-5 xl:col-span-4">
+              <TimelineProgressCard 
+                total={safeEvents.length} 
+                viewed={viewedEvents.length} 
+                nextEventTitle={nextEvent?.title}
+                onStartOrContinue={handleStartOrContinue}
+              />
+            </div>
+          </div>
+
+          {/* 3 Phases Overview Cards */}
+          <TimelinePhaseOverview />
 
           {/* Search & Filter Controls */}
           <div className="mb-12">
@@ -97,8 +134,6 @@ const TheoryTimelinePage = () => {
             </div>
           </div>
 
-          <TimelineFlow />
-
           {/* Main Timeline Content */}
           <div className="relative mt-16">
             {/* Vertical Line */}
@@ -107,13 +142,14 @@ const TheoryTimelinePage = () => {
             <div className="flex flex-col gap-8 md:gap-4">
               {filteredEvents.length > 0 ? (
                 filteredEvents.map((event, index) => (
-                  <TimelineEventCard 
-                    key={event.id} 
-                    event={event} 
-                    isEven={index % 2 === 0} 
-                    isViewed={viewedEvents.includes(event.id)}
-                    onViewDetail={handleViewDetail} 
-                  />
+                  <div id={event.id} key={event.id}>
+                    <TimelineEventCard 
+                      event={event} 
+                      isEven={index % 2 === 0} 
+                      isViewed={viewedEvents.includes(event.id)}
+                      onViewDetail={handleViewDetail} 
+                    />
+                  </div>
                 ))
               ) : (
                 <div className="py-12 text-center text-slate-500 bg-white rounded-2xl border border-slate-100 shadow-sm max-w-2xl mx-auto w-full">
