@@ -22,7 +22,7 @@ const FeatureStandalone = lazy(() => import('./pages/theory/FeatureStandalone'))
 
 function App() {
   return (
-    <div className="w-screen min-h-screen bg-dark text-white overflow-x-hidden">
+    <div className="w-full min-h-screen bg-dark text-white overflow-x-hidden">
       <ErrorBoundary>
         <Routes>
           {/* Landing */}

@@ -3,9 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-dark text-white overflow-hidden;
-    overscroll-behavior: none;
+    @apply bg-dark text-white;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   /* Custom scrollbar */
@@ -123,6 +138,16 @@
   
   .rotate-y-180 {
     transform: rotateY(180deg);
+  }
+
+  .page-wrapper {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .scrollable-panel {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

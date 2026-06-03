@@ -88,7 +88,7 @@ const ConceptGalaxy = () => {
 
   if (rawNodes.length === 0) {
     return (
-      <div className="h-screen w-screen bg-slate-50 flex flex-col relative">
+      <div className="min-h-screen w-full bg-slate-50 flex flex-col relative">
         <button onClick={() => navigate('/theory')} className="absolute top-4 left-4 z-10 flex items-center gap-2 text-slate-600 hover:text-blue-600">
           <ArrowLeft size={20} /> Quay lại
         </button>
@@ -99,7 +99,7 @@ const ConceptGalaxy = () => {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-[520px] md:min-h-[650px] h-screen w-screen bg-slate-900 text-white overflow-hidden relative">
+      <div className="min-h-[520px] md:min-h-[650px] min-h-screen w-full bg-slate-900 text-white overflow-hidden relative">
         {/* UI Overlay */}
         <div className="absolute top-0 left-0 right-0 p-4 z-50 flex justify-between items-start pointer-events-none">
           <button 
@@ -121,7 +121,7 @@ const ConceptGalaxy = () => {
         {/* Info Panel if node selected */}
         {selectedNode && (
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-lg pointer-events-auto px-4 md:px-0">
-            <div className="bg-slate-800/90 backdrop-blur-xl border border-slate-700 p-6 rounded-2xl shadow-2xl">
+            <div className="bg-slate-800/90 backdrop-blur-xl border border-slate-700 p-6 rounded-2xl shadow-2xl max-h-[60vh] overflow-y-auto scrollable-panel">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-xl font-bold text-white pr-4">{selectedNode.title || 'Không có tiêu đề'}</h3>
                 <button onClick={() => setSelectedNode(null)} className="text-slate-400 hover:text-white p-1">✕</button>
