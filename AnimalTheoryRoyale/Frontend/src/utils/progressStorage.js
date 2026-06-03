@@ -160,22 +160,36 @@ export function resetProgress() {
 }
 
 // New helper functions for Theory UI
+import { flashcardsData } from '../data/flashcardsData';
+import { caseLabData } from '../data/caseLabData';
+
 export function getChapterProgress(chapterId) {
   const p = getProgress();
   const theoryCompleted = p.completedSections[chapterId]?.includes('theory') || false;
   const flashcardsCompleted = p.completedSections[chapterId]?.includes('flashcards') || false;
   const caseStudyCompleted = p.completedSections[chapterId]?.includes('cases') || false;
   
-  let score = 0;
-  if (theoryCompleted) score += 40;
-  if (flashcardsCompleted) score += 30;
-  if (caseStudyCompleted) score += 30;
+  const hasFlashcards = Array.isArray(flashcardsData) && flashcardsData.some(fc => fc.chapterId === chapterId);
+  const hasCases = Array.isArray(caseLabData) && caseLabData.some(c => c.chapterId === chapterId);
+  
+  let totalWeight = 40;
+  let currentScore = theoryCompleted ? 40 : 0;
+  
+  if (hasFlashcards) {
+    totalWeight += 30;
+    if (flashcardsCompleted) currentScore += 30;
+  }
+  
+  if (hasCases) {
+    totalWeight += 30;
+    if (caseStudyCompleted) currentScore += 30;
+  }
   
   return {
     theoryCompleted,
     flashcardsCompleted,
     caseStudyCompleted,
-    completionPercentage: score
+    completionPercentage: totalWeight > 0 ? Math.round((currentScore / totalWeight) * 100) : 0
   };
 }
 

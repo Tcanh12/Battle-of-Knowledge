@@ -14,6 +14,11 @@ const ChapterDetail = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('theory'); 
   const [progress, setProgress] = useState({ theoryCompleted: false, flashcardsCompleted: false, caseStudyCompleted: false, completionPercentage: 0 });
+  const [revealedQuestions, setRevealedQuestions] = useState({});
+
+  const toggleQuestion = (idx) => {
+    setRevealedQuestions(prev => ({ ...prev, [idx]: !prev[idx] }));
+  };
 
   const safeChaptersData = Array.isArray(chaptersData) ? chaptersData : [];
   const safeFlashcardsData = Array.isArray(flashcardsData) ? flashcardsData : [];
@@ -154,20 +159,42 @@ const ChapterDetail = () => {
                     )}
 
                     {section.checkQuestion && (
-                      <div className="bg-blue-50/50 rounded-xl p-4 sm:p-6 border border-blue-100">
-                        <h4 className="font-bold text-blue-800 mb-2 flex items-center gap-2 text-sm sm:text-base">
+                      <div className="bg-blue-50/50 rounded-xl p-4 sm:p-6 border border-blue-100 mt-6">
+                        <h4 className="font-bold text-blue-800 mb-4 flex items-center gap-2 text-sm sm:text-base">
                           <AlertCircle size={18} /> Câu hỏi ôn tập nhanh
                         </h4>
-                        <p className="text-slate-700 font-medium text-sm sm:text-base mb-1">
-                          <span className="font-bold text-blue-900 mr-1">Q:</span> 
-                          {typeof section.checkQuestion === 'string' ? section.checkQuestion : section.checkQuestion?.question || ''}
-                        </p>
-                        {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
-                          <p className="text-slate-600 text-sm sm:text-base mt-2 pl-4 border-l-2 border-blue-200">
-                            <span className="font-bold text-blue-700 mr-1">A:</span> 
-                            {section.checkQuestion.answer}
+                        <div className="bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                          <p className="text-slate-700 font-medium text-sm sm:text-base">
+                            <span className="font-bold text-blue-900 mr-2 text-lg">Q:</span> 
+                            {typeof section.checkQuestion === 'string' ? section.checkQuestion : section.checkQuestion?.question || ''}
                           </p>
-                        )}
+                          
+                          {typeof section.checkQuestion !== 'string' && section.checkQuestion?.answer && (
+                            <div className="mt-4 pt-4 border-t border-slate-100">
+                              {!revealedQuestions[idx] ? (
+                                <button 
+                                  onClick={() => toggleQuestion(idx)}
+                                  className="text-sm font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1.5 transition-colors bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg"
+                                >
+                                  Xem đáp án
+                                </button>
+                              ) : (
+                                <div className="animate-in fade-in slide-in-from-top-2">
+                                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                    <span className="font-bold text-emerald-600 mr-2 text-lg">A:</span> 
+                                    {section.checkQuestion.answer}
+                                  </p>
+                                  <button 
+                                    onClick={() => toggleQuestion(idx)}
+                                    className="text-xs font-medium text-slate-400 hover:text-slate-600 mt-3 inline-flex items-center"
+                                  >
+                                    Thu gọn
+                                  </button>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     )}
                   </div>
