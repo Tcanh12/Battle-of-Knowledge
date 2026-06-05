@@ -27,6 +27,7 @@ const ConceptGalaxy = () => {
     const positionedNodes = rawNodes.map(node => {
       let x = cx;
       let y = cy;
+      let angle = node.angle;
 
       if (node.level === 0) {
         x = cx;
@@ -34,12 +35,11 @@ const ConceptGalaxy = () => {
       } else if (node.level === 1) {
         const chapterNodes = rawNodes.filter(n => n.level === 1);
         const index = chapterNodes.findIndex(n => n.id === node.id);
-        const angle = (index / (chapterNodes.length || 1)) * 2 * Math.PI - Math.PI / 2;
+        angle = (index / (chapterNodes.length || 1)) * 2 * Math.PI - Math.PI / 2;
         x = cx + 450 * Math.cos(angle);
         y = cy + 450 * Math.sin(angle);
-        node.angle = angle;
       }
-      return { ...node, x, y };
+      return { ...node, x, y, angle };
     });
 
     const finalNodes = positionedNodes.map(node => {
@@ -51,9 +51,9 @@ const ConceptGalaxy = () => {
           const spread = Math.PI / 2; 
           const angleOffset = (index / (siblings.length - 1 || 1)) * spread - (spread / 2);
           const angle = (parent.angle || 0) + angleOffset;
-          x = cx + 850 * Math.cos(angle);
-          y = cy + 850 * Math.sin(angle);
-          return { ...node, x, y };
+          const x = cx + 850 * Math.cos(angle);
+          const y = cy + 850 * Math.sin(angle);
+          return { ...node, x, y, angle };
         }
       }
       return node;
