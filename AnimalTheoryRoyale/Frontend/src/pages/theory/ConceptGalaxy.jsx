@@ -36,8 +36,8 @@ const ConceptGalaxy = () => {
         const chapterNodes = rawNodes.filter(n => n.level === 1);
         const index = chapterNodes.findIndex(n => n.id === node.id);
         angle = (index / (chapterNodes.length || 1)) * 2 * Math.PI - Math.PI / 2;
-        x = cx + 450 * Math.cos(angle);
-        y = cy + 450 * Math.sin(angle);
+        x = cx + 550 * Math.cos(angle);
+        y = cy + 550 * Math.sin(angle);
       }
       return { ...node, x, y, angle };
     });
@@ -48,11 +48,11 @@ const ConceptGalaxy = () => {
         if (parent) {
           const siblings = rawNodes.filter(n => n.level === 2 && n.chapterId === node.chapterId);
           const index = siblings.findIndex(n => n.id === node.id);
-          const spread = Math.PI / 2; 
-          const angleOffset = (index / (siblings.length - 1 || 1)) * spread - (spread / 2);
+          const spread = Math.PI * 0.75; 
+          const angleOffset = siblings.length > 1 ? (index / (siblings.length - 1)) * spread - (spread / 2) : 0;
           const angle = (parent.angle || 0) + angleOffset;
-          const x = cx + 850 * Math.cos(angle);
-          const y = cy + 850 * Math.sin(angle);
+          const x = parent.x + 380 * Math.cos(angle);
+          const y = parent.y + 380 * Math.sin(angle);
           return { ...node, x, y, angle };
         }
       }
@@ -71,16 +71,22 @@ const ConceptGalaxy = () => {
       
       if (!sourceNode || !targetNode) return null;
 
+      const isCore = edge.source === 'core-cnxhkh';
+      const x1 = sourceNode.x + 120;
+      const y1 = sourceNode.y + 50;
+      const x2 = targetNode.x + 120;
+      const y2 = targetNode.y + 50;
+
       return (
         <line 
           key={idx}
-          x1={sourceNode.x + 100} 
-          y1={sourceNode.y + 50} 
-          x2={targetNode.x + 100} 
-          y2={targetNode.y + 50} 
-          stroke="rgba(255,255,255,0.15)" 
-          strokeWidth="2"
-          strokeDasharray={edge.source === 'core-cnxhkh' ? "none" : "4,4"}
+          x1={x1} 
+          y1={y1} 
+          x2={x2} 
+          y2={y2} 
+          stroke={isCore ? "rgba(129, 140, 248, 0.4)" : "rgba(52, 211, 153, 0.2)"} 
+          strokeWidth={isCore ? "3" : "1.5"}
+          strokeDasharray={isCore ? "none" : "5,5"}
         />
       );
     });
