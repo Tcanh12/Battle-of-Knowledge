@@ -1,6 +1,6 @@
 # TÀI LIỆU PHÂN TÍCH VÀ GIỚI THIỆU SẢN PHẨM SÁNG TẠO
 **Dự án:** Animal Theory Royale – Vòng Bo Tri Thức 3D  
-**Môn học ứng dụng:** Tư tưởng Hồ Chí Minh (HCM201) / Chủ nghĩa xã hội khoa học  
+**Môn học ứng dụng:** Chủ nghĩa xã hội khoa học (MLN131)
 
 ---
 
@@ -12,15 +12,15 @@
 * **Đối tượng hướng đến:** Sinh viên đại học đang học các môn lý luận chính trị và Giảng viên cần công cụ tương tác mới lạ để kiểm tra kiến thức trên lớp.
 
 ## 2. BỐI CẢNH VÀ LÝ DO XÂY DỰNG HỆ THỐNG
-* **Vấn đề thực tế đang tồn tại:** Các môn lý luận chính trị (Tư tưởng Hồ Chí Minh, Triết học) thường bị gắn mác là "khô khan", nhiều lý thuyết chữ, khiến sinh viên dễ mất tập trung, mệt mỏi và học mang tính đối phó để qua môn.
+* **Vấn đề thực tế đang tồn tại:** Các môn lý luận chính trị (Chủ nghĩa xã hội khoa học, Triết học) thường bị gắn mác là "khô khan", nhiều lý thuyết chữ, khiến sinh viên dễ mất tập trung, mệt mỏi và học mang tính đối phó để qua môn.
 * **Những bất cập của cách làm hiện tại:** Các công cụ trắc nghiệm hiện tại (như Kahoot, Quizizz) dù tốt nhưng chỉ dừng ở giao diện 2D tĩnh, lặp đi lặp lại một mô típ bấm chọn đáp án, không đủ sức giữ chân và tạo sự phấn khích cho Gen Z trong thời gian dài.
 * **Vì sao quyết định xây dựng:** Nhóm nhận thấy nếu kết hợp được "sức ép sinh tồn" (phải né bẫy, chạy vòng bo) với "áp lực học thuật" (phải trả lời đúng câu hỏi), não bộ người học sẽ được kích thích tối đa, giúp việc ghi nhớ kiến thức diễn ra tự nhiên, sâu sắc và gắn liền với cảm xúc vui vẻ.
 * **Giá trị cốt lõi giải quyết:** Biến thời gian ôn tập lý thuyết thành thời gian giải trí, phá vỡ rào cản tâm lý "sợ môn chính trị" của sinh viên.
 
-## 3. SỰ LIÊN HỆ VỚI MÔN HỌC (TƯ TƯỞNG HỒ CHÍ MINH)
-* **Mức độ liên quan:** Hệ thống sở hữu ngân hàng dữ liệu với hơn 75+ câu hỏi chuyên sâu bám sát giáo trình Tư tưởng Hồ Chí Minh. Các trạm kiến thức trong game ("Chương X") tương ứng với từng giai đoạn hình thành và phát triển của tư tưởng.
+## 3. SỰ LIÊN HỆ VỚI MÔN HỌC (CHỦ NGHĨA XÃ HỘI KHOA HỌC)
+* **Mức độ liên quan:** Hệ thống sở hữu ngân hàng dữ liệu với hơn 100 câu hỏi chuyên sâu bám sát giáo trình Chủ nghĩa xã hội khoa học. Các trạm kiến thức trong game ("Chương X") tương ứng với từng giai đoạn hình thành và phát triển của các chủ thuyết.
 * **Cách chuyển đổi kiến thức thành sản phẩm:** Nhóm đã hệ thống hóa kiến thức môn học vào **Vũ trụ khái niệm (Concept Galaxy)** và **Dòng chảy lịch sử (Timeline)**. Khi vào game, thay vì đọc sách để lấy điểm, người chơi phải trực tiếp "va chạm" vào các cột sáng tri thức. Trả lời đúng (áp dụng lý thuyết) sẽ được cộng điểm sinh tồn, sai bị trừ máu. 
-* **Giá trị học tập đạt được:** Thông qua vòng lặp *Thử – Sai – Sửa* liên tục trong game, sinh viên hình thành phản xạ nhanh với các mốc sự kiện lịch sử, các khái niệm cốt lõi của Chủ nghĩa Mác-Lênin và Tư tưởng Hồ Chí Minh.
+* **Giá trị học tập đạt được:** Thông qua vòng lặp *Thử – Sai – Sửa* liên tục trong game, sinh viên hình thành phản xạ nhanh với các mốc sự kiện lịch sử, các khái niệm cốt lõi của Chủ nghĩa Mác-Lênin và Chủ nghĩa xã hội khoa học.
 * **Kỹ năng phát triển:** Không chỉ củng cố kiến thức học thuật, người chơi còn rèn luyện tư duy phản biện (chọn đáp án dưới áp lực thời gian), kỹ năng làm việc nhóm và năng lực ứng dụng công nghệ thông tin.
 
 ## 4. Ý NGHĨA CỦA SẢN PHẨM SÁNG TẠO
@@ -30,9 +30,9 @@
 * **Giá trị đổi mới/sáng tạo:** Lần đầu tiên đưa môi trường 3D đa nền tảng và cơ chế xử lý vật lý vật thể (Physics Engine) thời gian thực vào một công cụ phục vụ môn đại cương.
 
 ## 5. MỤC TIÊU CỦA HỆ THỐNG
-* **Mục tiêu ngắn hạn:** Ứng dụng trực tiếp làm công cụ ôn tập cho sinh viên trong kỳ thi môn Tư tưởng Hồ Chí Minh, giúp 100% sinh viên trải nghiệm có đánh giá tích cực về độ hứng thú.
+* **Mục tiêu ngắn hạn:** Ứng dụng trực tiếp làm công cụ ôn tập cho sinh viên trong kỳ thi môn Chủ nghĩa xã hội khoa học, giúp 100% sinh viên trải nghiệm có đánh giá tích cực về độ hứng thú.
 * **Mục tiêu dài hạn:** Mở rộng hệ thống thành nền tảng thi đấu đa môn học (Triết học, Lịch sử Đảng, Pháp luật đại cương), có khả năng chịu tải hàng nghìn người chơi cùng lúc.
-* **Kết quả mong đợi:** Cải thiện rõ rệt điểm số trung bình của lớp tham gia trải nghiệm so với phương pháp ôn tập truyền thống.
+* **Kết quả mong đợi:** cải thiện rõ rệt điểm số trung bình của lớp tham gia trải nghiệm so với phương pháp ôn tập truyền thống.
 
 ## 6. ĐỐI TƯỢNG SỬ DỤNG
 | Nhóm người dùng | Vai trò | Quyền hạn & Mục đích sử dụng |
